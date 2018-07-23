@@ -15,7 +15,10 @@
     <h2>Screen Name: {{vm.user.screenName}}</h2>
     <input-component></input-component>
     <div>
-      Tweets: {{vm.tweets.wordOne.length}}
+      Tweet One: {{vm.tweets.wordOne.length}}
+    </div>
+    <div>
+      Tweet Two: {{vm.tweets.wordTwo.length}}
     </div>
     <pie-chart data="vm.tweets"></pie-chart>
   </div>
@@ -35,5 +38,5 @@
 <script src='directives/input.js'></script>
 <script src='directives/pieChart.js'></script>
 <!-- stylesheets -->
-
+<link rel="stylesheet" type="text/css" href="css/app.css">
 </html>
