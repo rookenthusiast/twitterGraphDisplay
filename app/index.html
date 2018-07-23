@@ -1,6 +1,7 @@
 <!DOCTYPE>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Twitter Graph Displays</title>
@@ -9,13 +10,30 @@
 </head>
 
 <body ng-app='ngTwitterGraphs'>
-  <div>
-    Hello I'm the application
+  <div ng-controller='applicationController as vm'>
+    <h1>Welcome, {{vm.user.name}}</h1>
+    <h2>Screen Name: {{vm.user.screenName}}</h2>
     <input-component></input-component>
-</div>
+    <div>
+      Tweets: {{vm.tweets.wordOne.length}}
+    </div>
+    <pie-chart data="vm.tweets"></pie-chart>
+  </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- angular components -->
+<script src="angular/angular.min.js"></script>
+<script src="angular-socket-io/socket.min.js"></script>
+<script src="d3/d3.min.js"></script>
+<!-- init angular app -->
 <script src='app.js'></script>
+<!-- angular controllers -->
+<script src='services/api.js'></script>
+<script src='services/liveTwitterFeed.js'></script>
 <script src='controllers/applicationController.js'></script>
 <script src='directives/input.js'></script>
+<script src='directives/pieChart.js'></script>
+<!-- stylesheets -->
+
 </html>

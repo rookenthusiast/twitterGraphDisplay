@@ -6,7 +6,12 @@ app.directive('inputComponent',function(){
         controllerAs: 'vm',
         bindToController: true,
         controller: function($scope){
-            this.first = 'word1';
+            this.words = {first:'',second:''};
+            this.fired = false;
+            this.action = function(action,data){
+                this.fired = true;
+                $scope.$emit('action',{action, data});
+            }.bind(this);
         }
     }
 })

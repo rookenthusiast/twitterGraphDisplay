@@ -1,4 +1,8 @@
 <div>
-    hello
-    <input type='text' ng-model='vm.first'>
+    <p>Compare the volume of tweets including the two words inputed</p>
+    <input type='text' ng-model='vm.words.first'>
+    <input type='text' ng-model='vm.words.second'>
+    <button ng-click="vm.action('set',vm.words)" ng-disabled='vm.fired'>set</button>
+    <button ng-click="vm.action('update',vm.words)" ng-disabled="!vm.fired">update</button>
+    <button ng-click="vm.action('close')" ng-disabled="!vm.fired">close</button>
 </div>

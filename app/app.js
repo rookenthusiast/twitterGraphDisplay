@@ -1,1 +1,1 @@
-var app = angular.module('ngTwitterGraphs', []);
+var app = angular.module('ngTwitterGraphs', ['btford.socket-io']);
