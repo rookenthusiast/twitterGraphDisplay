@@ -1,0 +1,21 @@
+{
+  "name": "twittergraphdisplays",
+  "description": "AngularJs app that displays the comparison between the volume of two words tweeted and displays as a graphical ui",
+  "main": "server.js",
+  "authors": [
+    "cameron <cameron.fulton@financial-cloud.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rookenthusiast/twitterGraphDisplay",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-socket-io": "^0.7.0",
+    "d3": "^5.5.0"
+  }
+}
