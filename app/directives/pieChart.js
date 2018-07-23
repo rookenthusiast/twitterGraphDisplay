@@ -13,7 +13,7 @@ app.directive('pieChart', [function () {
                 .transition()
                 .duration(300)
                 .style("width", function (d) {
-                    return d + "vw";
+                    return d + "%";
                 })
                 .text(function (d) {
                     return d + " Tweets";
@@ -28,7 +28,7 @@ app.directive('pieChart', [function () {
                     .transition()
                     .duration(300)
                     .style("width", function (d) {
-                        return d + "vw";
+                        return d + "%";
                     })
                     .text(function (d) {
                         return d + " Tweets";
